@@ -1,0 +1,12 @@
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDashboard
+metadata:
+  name: grafanadashboard-from-configmap
+  namespace: <grafana-operator-namespace>
+spec:
+  instanceSelector:
+    matchLabels:
+      dashboards: <Grafana-cloud-stack-name>
+  configMapRef:
+    name: dashboard-definition
+    key: json
