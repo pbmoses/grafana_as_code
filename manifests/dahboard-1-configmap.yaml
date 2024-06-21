@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: dashboard-definition
+  name: dashboard-definition-1
   namespace: declarative-grafana
 spec:
   resyncPeriod: 30s
