@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dashboard-definition
+  namespace: declarative-grafana
+spec:
+  resyncPeriod: 30s
+  instanceSelector:
+    matchLabels:
+      dashboards: <Grafana-cloud-stack-name>
+  json: >
+    {
+   your data here
+    }
