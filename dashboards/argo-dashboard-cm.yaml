@@ -8,7 +8,7 @@ spec:
   instanceSelector:
     matchLabels:
       dashboards: pbmoses
-  json: >
+  json: |
     {
     "annotations": {
       "list": [
