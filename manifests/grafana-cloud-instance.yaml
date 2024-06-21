@@ -1,0 +1,13 @@
+apiVersion: grafana.integreatly.org/v1beta1
+kind: Grafana
+metadata:
+  name: <Grafana-cloud-stack-name>
+  namespace: <grafana-operator-namespace>
+  labels:
+    dashboards: <Grafana-cloud-stack-name>
+spec:
+  external:
+    url: https://<Grafana-cloud-stack-name>.grafana.net/
+    apiKey:
+      name: grafana-cloud-credentials
+      key: GRAFANA_CLOUD_INSTANCE_TOKEN
