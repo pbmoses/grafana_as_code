@@ -8,8 +8,13 @@ Grafana Cloud account
 https://grafana.com/get/
 
 Kubernetes Cluster or single node operation
-lightweight and cheap to run: https://k3s.io/
+
+lightweight and cheap to run:
+https://k3s.io/
+
 ephemeral and fast: https://kind.sigs.k8s.io/
+
+OpenShift/OKD
 https://docs.okd.io/latest/installing/installing_sno/install-sno-installing-sno.html
 
 Installation and Some knowledge of ArgoCD
