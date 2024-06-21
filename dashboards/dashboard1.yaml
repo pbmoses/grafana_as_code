@@ -8,5 +8,5 @@ spec:
     matchLabels:
       dashboards: <Grafana-cloud-stack-name>
   configMapRef:
-    name: dashboard-definition
+    name: dashboard-definition-1
     key: json
