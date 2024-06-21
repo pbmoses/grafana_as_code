@@ -9,17 +9,6 @@ spec:
     matchLabels:
       dashboards: pbmoses
   json: >
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: dashboard-definition-1
-  namespace: declarative-grafana
-spec:
-  resyncPeriod: 30s
-  instanceSelector:
-    matchLabels:
-      dashboards: pbmoses
-  json: >
     {
       "title": "Simple Dashboard",
       "timezone": "browser",
