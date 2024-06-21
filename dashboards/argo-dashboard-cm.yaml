@@ -7,7 +7,7 @@ spec:
   resyncPeriod: 30s
   instanceSelector:
     matchLabels:
-      dashboards: Dashboards
+      dashboards: pbmoses
   json: >
 apiVersion: v1
 kind: ConfigMap
