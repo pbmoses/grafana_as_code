@@ -1,12 +1,12 @@
 apiVersion: grafana.integreatly.org/v1beta1
 kind: GrafanaDashboard
 metadata:
-  name: grafanadashboard-from-configmap
-  namespace: <grafana-operator-namespace>
+  name: argo-demo-from-configmap
+  namespace: declarative-grafana
 spec:
   instanceSelector:
     matchLabels:
-      dashboards: <Grafana-cloud-stack-name>
+      dashboards: pbmoses
   configMapRef:
     name: dashboard-definition-1
     key: json
