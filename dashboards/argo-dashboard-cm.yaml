@@ -9,10 +9,21 @@ spec:
     matchLabels:
       dashboards: pbmoses
   json: >
-     {
-  "annotations": {
-    "list": [
-      {
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dashboard-definition-1
+  namespace: declarative-grafana
+spec:
+  resyncPeriod: 30s
+  instanceSelector:
+    matchLabels:
+      dashboards: pbmoses
+  json: >
+{
+ "annotations": {
+      "list": [
+        {
         "builtIn": 1,
         "datasource": {
           "type": "grafana",
@@ -25,7 +36,7 @@ spec:
         "type": "dashboard"
       }
     ]
-  },
+   },
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
