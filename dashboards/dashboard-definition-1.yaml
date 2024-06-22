@@ -3,6 +3,6 @@ kind: GrafanaDashboard
 metadata:
   name: argo-folder
   namespace: declarative-grafana
-  configMapRef:
-    name: dashboard-definition-1
-    key: json
+configMapRef:
+  name: dashboard-definition-1
+  key: json
