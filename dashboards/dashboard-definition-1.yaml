@@ -3,6 +3,10 @@ kind: GrafanaDashboard
 metadata:
   name: argo-folder
   namespace: declarative-grafana
+spec:
+  instanceSelector:
+    matchLabels:
+      dashboards: "pbmoses"
 configMapRef:
   name: dashboard-definition-1
   key: json
