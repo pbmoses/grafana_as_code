@@ -1,5 +1,5 @@
 # grafana_as_code
-ArgoCD + Grafana bits and pieces for testing
+ArgoCD + Grafana bits and pieces for testing (WiP)
 
 Testing ArgoCD + Grafana Cloud for declarative approaches. 
 
