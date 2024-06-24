@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: dashboard-definition-1
+  name: home-demo-dashboard-1
   namespace: declarative-grafana
 data:
   json: | 
