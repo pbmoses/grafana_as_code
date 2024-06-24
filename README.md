@@ -30,6 +30,6 @@ Installation and Some knowledge of ArgoCD
 
 https://argo-cd.readthedocs.io/en/stable/
 
-Only the Dashboards directory needs to be sync'd at this time. The manifests folder is a place holder. **DO NOT STROE SECRETS IN GIT!!**
+Only the Dashboards directory needs to be sync'd at this time. The manifests folder is a place holder. **DO NOT STORE SECRETS IN GIT!!**
 
 
