@@ -8,5 +8,5 @@ spec:
     matchLabels:
       dashboards: "pbmoses"
   configMapRef:
-    name: dashboard-definition-1
+    name: home-demo-dashboard-1
     key: json
