@@ -1,0 +1,11 @@
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDashboard
+metadata:
+  name: node-exporter-latest
+  namespace: <grafana-operator-namespace>
+spec:
+  instanceSelector:
+    matchLabels:
+      dashboards: <Grafana-cloud-stack-name>
+  grafanaCom:
+    id: 1860
