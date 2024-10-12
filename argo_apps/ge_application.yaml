@@ -13,8 +13,8 @@ spec:
       chart: grafana
       helm:
         valueFiles:
-          - $values/charts/grafana/ge-overrides.yaml
-    - repoURL: https://github.com/pbmoses/helm-charts.git
+          - $values/manifest-examples/ge-overrides.yaml
+    - repoURL: https://github.com/pbmoses/ge-values.git
       targetRevision: HEAD 
       ref: values
   project: default
