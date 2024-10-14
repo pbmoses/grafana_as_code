@@ -3,6 +3,9 @@ kind: Namespace
 metadata:
   labels:
     kubernetes.io/metadata.name: gem
+    metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
   name: gem
 spec:
   finalizers:
