@@ -62,9 +62,9 @@ echo "$RESPONSE" | jq .
 ## Usage  
 
 ```  
-export `FM_BASE_URL`="https://fleet-management-prod-123.grafana.net"  
-export `GRAFANA_API_KEY`="glsa_..."  
-bash apply-pipeline.sh ./phils-demo.alloy
+export FM_BASE_URL="https://fleet-management-prod-123.grafana.net"  
+export GRAFANA_API_KEY="glsa_..."  
+bash apply-pipeline.sh ./phils-demo.alloy  
 
 ```
 ​  
