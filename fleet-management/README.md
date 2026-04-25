@@ -58,7 +58,6 @@ bash apply-pipeline.sh ./phils-demo.alloy
 
 - **FM_BASE_URL** — Fleet Management UI → API tab  
 - **GRAFANA_API_KEY** — Grafana Cloud → Administration → Service Accounts (Editor role required)  
-- **matchers** — add key/value pairs to target specific collectors, e.g. `[{"name":"env","value":"prod"}]`  
 
 ## Notes  
 
