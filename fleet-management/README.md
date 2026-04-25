@@ -44,21 +44,6 @@ echo "Done:"
 echo "$RESPONSE" | jq .  
 ```
 
-
-# ── Upsert pipeline ───────────────────────────────────────────────────────────  
-```
-echo "Upserting pipeline '$`PIPELINE_NAME`' ..."  
-RESPONSE=$(curl -sf \  
-  --request POST \  
-  --url "${`BASE_URL`}/pipeline.v1.PipelineService/UpsertPipeline" \  
-  --header "Authorization: Bearer ${`API_KEY`}" \  
-  --header "Content-Type: application/json" \  
-  --data "$PAYLOAD")  
-
-echo "Done:"  
-echo "$RESPONSE" | jq .  
-```
-
 ## Usage  
 
 ```  
