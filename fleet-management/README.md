@@ -8,21 +8,21 @@
 set -euo pipefail  
 
 # ── Config (set via env or edit here) ────────────────────────────────────────  
-`BASE_URL`="${`FM_BASE_URL`:?Set `FM_BASE_URL` to your Fleet Management base URL}"  
+BASE_URL="${FM_BASE_URL:?Set FM_BASE_URL to your Fleet Management base URL}"  
 # e.g. https://fleet-management-prod-123.grafana.net  
-`API_KEY`="${`GRAFANA_API_KEY`:?Set `GRAFANA_API_KEY` to a Grafana Cloud service account token}"  
-`PIPELINE_NAME`="phils-demo"  
-`CONFIG_FILE`="${1:-config.alloy}"   # pass path to your .alloy file as $1  
+API_KEY="${GRAFANA_API_KEY:?Set GRAFANA_API_KEY to a Grafana Cloud service account token}"  
+PIPELINE_NAME="phils-demo"  
+CONFIG_FILE="${1:-config.alloy}"   # pass path to your .alloy file as $1  
 
 # ── Build JSON payload ────────────────────────────────────────────────────────  
-if [[ ! -f "$`CONFIG_FILE`" ]]; then  
-  echo "ERROR: config file '$`CONFIG_FILE`' not found" >&2  
+if [[ ! -f "$CONFIG_FILE" ]]; then  
+  echo "ERROR: config file '$CONFIG_FILE' not found" >&2  
   exit 1  
 fi  
 
 PAYLOAD=$(jq -n \  
-  --arg name "$`PIPELINE_NAME`" \  
-  --rawfile contents "$`CONFIG_FILE`" \  
+  --arg name "$PIPELINE_NAME" \  
+  --rawfile contents "$CONFIG_FILE" \  
   '{  
     pipeline: {  
       name: $name,  
@@ -30,6 +30,18 @@ PAYLOAD=$(jq -n \
       matchers: []  
     }  
   }')  
+
+# ── Upsert pipeline ───────────────────────────────────────────────────────────  
+echo "Upserting pipeline '$PIPELINE_NAME' ..."  
+RESPONSE=$(curl -sf \  
+  --request POST \  
+  --url "${BASE_URL}/pipeline.v1.PipelineService/UpsertPipeline" \  
+  --header "Authorization: Bearer ${API_KEY}" \  
+  --header "Content-Type: application/json" \  
+  --data "$PAYLOAD")  
+
+echo "Done:"  
+echo "$RESPONSE" | jq .  
 ```
 
 
